@@ -7,3 +7,5 @@ O jogador tem que adivinhar o número.
 Se o jogador acertar, o programa exibe uma mensagem de parabéns.
 Se o jogador errar, o programa dá mais duas chances.
 Se o jogador não acertar em nenhuma das três tentativas, o programa revela qual era o número inicial.
+
+veja em : https://obrunowww.github.io/7DaysOfCode-3/
