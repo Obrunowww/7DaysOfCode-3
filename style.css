@@ -1,0 +1,196 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body{
+    color: white;
+    background-color: rgb(26, 25, 25);
+    font-size: 20px;
+    
+}
+main{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.adivinha{
+    border-radius: 10px;
+    animation: aparecerCaixa ease 2s;
+    opacity: 1;
+    padding: 1%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3%;
+    width: 50%;
+    height: 50%;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.062);
+}
+.adivinha div{
+    width: 100%;
+
+}
+.adivinha input{
+    color: white;
+    width: 5%;
+    padding: 1%;
+    outline: 0;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.445);
+}
+
+.caixaDoAlerta{
+    display: flex;
+    font-size: 14px;
+    position: absolute;
+    animation: aparecerCaixa ease 1.5s;
+    top: 2%;
+    right: 2%;
+    border: solid 1px;
+    width: 20%;
+    height: 15%;
+    opacity: 1;
+}
+.caixaDoAlerta h2{
+    padding: 6%;
+    width: 100%;
+    height: 98%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.caixaDoAlerta::after{
+    content: "";
+    animation: loadErro linear 2s;
+    display: block;
+    width: 100%;
+    height: 5%;
+    bottom: 0;
+    position: absolute;
+    background-color: white;
+}
+
+.SeleçãoDeModos{
+    width: 100%;
+    margin-top: 13%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.SeleçãoDeModos div{
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+.SeleçãoDeModos div button{
+    padding: 1%;
+    transition: all linear 1s;
+    width: 30%;
+    background: transparent;
+    color: white;
+    border: solid 1px white;
+    cursor: pointer;
+}
+.SeleçãoDeModos div button:hover{
+    background-color: rgba(0, 128, 0, 0.425);
+}
+
+
+.menu{
+    transition: all ease 1s;
+    position: absolute;
+    
+    left: 0.5%;
+    top: 0.5%;
+    width: 2%;
+    height: 3%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    cursor: pointer;
+    animation:  aparecerEsquerda ease 1s;
+}
+.menu span{
+    border: solid 1px ;
+    width: 50%;
+    height: 0.5%;
+    background-color: white;
+}
+.menuAberto{
+    display: flex;
+    flex-direction: column;
+    gap: 3%;
+    padding-top: 3%;
+    padding-left: 1%;
+
+    animation: aparecerEsquerda ease 1s;
+    position: absolute;
+    left: 0;
+    width: 20%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.425);
+}
+.fechar{
+    z-index: 99;
+    cursor: pointer;
+    position: absolute;
+    right: 2%;
+    top: 0;
+    width: 10%;
+    text-align: center;
+}
+.mostruario{
+    display: none;
+    overflow: hidden;
+    top: 5%;
+    position: absolute;
+    width: 5%;
+    height: 10%;
+    border: solid 1px white;
+    
+}
+.mostruario p{
+    transition: all ease 1s;
+    transform: translateY(-0%);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+@keyframes loadErro{
+    to{
+        width: 0%;
+    }
+}
+
+@keyframes aparecerCaixa{
+    from{
+        opacity: 0;
+        scale: 0.5;
+        transform: translateY(100%);
+    }
+}
+@keyframes aparecerEsquerda {
+    from{
+        transform: translateX(-200%);
+    }
+    
+}
+@keyframes IrParaEsquerda {
+    to{
+        transform: translateX(-101%);
+    }
+}
